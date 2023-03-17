@@ -5,7 +5,7 @@
  *
  * Description: Aplly
  *
- * Return: Returns 0 (secess)
+ * Return: Returns 0 (sucess)
 */
 int main(void)
 {
@@ -19,5 +19,6 @@ if (x != 101 && x != 113)
 	x++;
 }
 }
+	putchar('\n');
 	return (0);
 }
