@@ -2,18 +2,18 @@
 
 /**
  * _islower - Checks
- * c - Parameter
+ * Parameter: c
  *
  * Description: Checks alphabet
  *
  * Return: Return 0 (sucess)
 */
 int _islower(int c)
-	if (c >= 97 && c <= 122)
+	if (c >= 'a' && c <= 'z')
 {
 	return (1);
 }
-	else if (c >= 65 && c <= 90)
+	else if (c >= 'A' && c <= 'Z')
 {
 	return (0);
 }
