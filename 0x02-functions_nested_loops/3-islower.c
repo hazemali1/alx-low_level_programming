@@ -2,7 +2,7 @@
 
 /**
  * _islower - Checks
- * Parameter: c
+ * 'c' - Parameter
  *
  * Description: Checks alphabet
  *
@@ -10,14 +10,14 @@
 */
 int _islower(int c)
 {
-	if (c >= 'a' && c <= 'z')
+	if (c >= 97 && c <= 122)
 {
 	return (1);
 }
-	else if (c >= 'A' && c <= 'Z')
+	else if (c >= 65 && c <= 90)
 {
 	return (0);
 }
 	_putchar('\n');
-	return _islower(0);
+	return (_islower(0));
 }
