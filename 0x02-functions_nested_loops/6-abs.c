@@ -1,26 +1,18 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
   * _abs - Absolute
   *
   * Description: Absolute
   *
-  * @s: Parameter
+  * @r: Parameter
   *
   * Return: Return 0 (sucess)
  */
-int _abs(int s)
+int _abs(int)
 {
-	if (s < 0)
-	{
-		s = s * -1;
-		_putchar(s);
-	}
-	else
-	{
-		_putchar(s);
-	}
+	int r;
+	abs(r);
 	_putchar('\n');
 	return (_abs(0));
 }
