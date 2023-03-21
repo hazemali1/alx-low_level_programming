@@ -3,9 +3,9 @@
 /**
  * _islower - Checks
  *
- * 'c' - Parameter
- *
  * Description: Checks alphabet
+ *
+ * @c: description of parameter c
  *
  * Return: Return 0 (sucess)
 */
