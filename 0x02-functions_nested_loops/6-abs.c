@@ -5,14 +5,13 @@
   *
   * Description: Absolute
   *
-  * @r: Parameter
+  * @s: Parameter
   *
   * Return: Return 0 (sucess)
  */
-int _abs(int)
+int _abs(int s)
 {
-	int r;
-	abs(r);
-	_putchar('\n');
-	return (_abs(0));
+	if (s < 0)
+		s = (-1) * s;
+	return (n);
 }
