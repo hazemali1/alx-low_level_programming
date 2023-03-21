@@ -14,12 +14,12 @@ void print_alphabet(void)
 
 	for (s = 97; s <= 122; s++)
 	{
-		putchar(s);
+		_putchar(s);
 	}
 }
 int main(void)
 {
 	print_alphabet();
-	putchar('\n');
+	_putchar('\n');
 	return (0);
 }
