@@ -15,7 +15,10 @@ for (s = 0; s <= 9; s++)
 {
 for (d = 0; d <= 9; d++)
 {
-	_putchar(s * d);
+	_putchar(s '1' * d * '1');
+	_putchar(',');
+	_putchar(' ');
+	_putchar(' ');
 }
 }
 }
