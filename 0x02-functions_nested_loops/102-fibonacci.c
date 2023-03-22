@@ -11,8 +11,10 @@ int main(void)
 {
 	int s = 1;
 	int d = 2;
+	int f;
 
-	printf("%d, ", s, d);
+	printf("%d", s);
+	printf("%d, ", d);
 	f = s + d;
 	printf("%d, ", f);
 	return (0);
