@@ -9,13 +9,14 @@
 */
 void times_table(void)
 {
-	int s, d;
+	int f, s, d;
 
 for (s = 48; s <= 57; s++)
 {
 for (d = 48; d <= 57; d++)
 {
-	_putchar("%d",s * d);
+	f = s * d;
+	_putchar(f);
 	_putchar(',');
 	_putchar(' ');
 	_putchar(' ');
