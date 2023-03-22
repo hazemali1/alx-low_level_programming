@@ -33,7 +33,7 @@ int main(void)
 		h += 1;
 		l %= 10000000000;
 	}
-	printf("%ld%d", h, l);
+	printf("%ld%ld", h, l);
 	if (g != 98)
 	printf(", ");
 	r = o;
