@@ -9,13 +9,13 @@
 */
 int main(void)
 {
-	int s, d = 0;
+	int s, d;
 
 	for (s = 0; s < 1024; s++)
 	{
 		if (s % 3 == 0 || s % 5 == 0)
 		{
-		s + s = d;
+		d += s;
 		}
 	}
 	printf("%d\n", d);
