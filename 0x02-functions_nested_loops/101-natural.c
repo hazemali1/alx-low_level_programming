@@ -12,10 +12,12 @@ int main(void)
 	int s, d = 0;
 
 	for (s = 0; s < 1024; s++)
+	{
 		if (s % 3 == 0 || s % 5 == 0)
 		{
-		s + = d;
+		s + s = d;
 		}
+	}
 	printf("%d\n", d);
 return (0);
 }
