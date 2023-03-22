@@ -11,7 +11,7 @@ int main(void)
 {
 	long int s = 1;
 	long int d = 2;
-	long int f, g, b;
+	long int f, h, b;
 
 	while (d <= 4000000)
 	{
