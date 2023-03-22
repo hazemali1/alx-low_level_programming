@@ -11,11 +11,18 @@ int main(void)
 {
 	int s = 1;
 	int d = 2;
-	int f;
+	int f, g, h;
 
-	printf("%d", s);
+	printf("%d, ", s);
 	printf("%d, ", d);
+	for (g = 0; g < 50; g++)
+	{
 	f = s + d;
+	f = h;
+	f = h + d;
+	d = f;
+	s = h;
 	printf("%d, ", f);
+	}
 	return (0);
 }
