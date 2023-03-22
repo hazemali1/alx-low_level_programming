@@ -23,8 +23,10 @@ for (d = 48; d <= 57; d++)
 	if (f <= 9)
 		_putchar(' ');
 	else
-		_putchar((f /10) + 48);
+	{
+		_putchar((f / 10) + 48);
 		_putchar((f % 10) + 48);
+	}
 }
 	_putchar('\n');
 }
