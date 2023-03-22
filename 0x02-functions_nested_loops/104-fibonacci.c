@@ -9,59 +9,38 @@
 */
 int main(void)
 {
-	long int s = 1;
-	long int d = 2;
-	long int f, g, h, o, p, l, r, x, w, u;
+	long int s = 0;
+	long int d = 1;
+	long int f, g, h, o, p, l, r, u;
 
-	printf("%ld, ", s);
-	printf("%ld, ", d);
-	for (g = 0; g < 44; g++)
+	for (g = 0; g < 92; g++)
 	{
 	f = s + d;
-	h = f;
 	printf("%ld, ", f);
-	f = h + d;
+	s = d;
 	d = f;
-	printf("%ld", d);
-	printf(", ");
-	s = h;
 	}
 	r = s / 10000000000;
 	u = s % 10000000000;
 	o = d / 10000000000;
 	p = d % 10000000000;
-	for (l = 0; l < 4; l++)
+	for (g = 93; g < 99; g++)
 	{
-	if (r + o > 999999999)
+	h = r + o;
+	l = u + p;
+	if (u + p > 9999999999)
 	{
-		o++;
+		h += 1;
+		l %= 10000000000;
 	}
-	if (u + p > 999999999)
-        {
-		p = p - 10;
+	printf("%ld%d", h, l);
+	if (g != 98)
+	printf(", ");
+	r = o;
+	u = p;
+	o = h;
+	p = l;
 	}
-	f = r + o;
-	w = u + p;
-	h = f;
-	x = w;
-	printf("%ld", f);
-	printf("%ld, ", w);
-	f = o + h;
-	w = p + x;
-	o = f;
-	p = w;
-	printf("%ld", o);
-	printf("%ld", p);
-	if (l < 3)
-	{
-		printf(", ");
-	}
-	else
-	{
-		printf("\n");
-	}
-	r = h;
-	u = x;
-	}
+	printf("\n");
 	return (0);
 }
