@@ -26,6 +26,6 @@ for (d = 48; d <= 57; d++)
 		_putchar((f /10) + 48);
 		_putchar((f % 10) + 48);
 }
-_putchar('\n')
+	_putchar('\n');
 }
 }
