@@ -15,7 +15,7 @@ for (s = 48; s <= 57; s++)
 {
 for (d = 48; d <= 57; d++)
 {
-	_putchar(s * d);
+	_putchar(s * '1' * d * '1');
 	_putchar(',');
 	_putchar(' ');
 	_putchar(' ');
