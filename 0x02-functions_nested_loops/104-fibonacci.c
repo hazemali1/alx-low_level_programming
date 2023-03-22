@@ -9,14 +9,15 @@
 */
 int main(void)
 {
-	long int s = 0;
-	long int d = 1;
-	long int f, g, h, o, p, l, r, u;
+	int g;
+	unsigned long s = 0;
+	unsigned long d = 1;
+	unsigned long f, h, o, p, l, r, u;
 
 	for (g = 0; g < 92; g++)
 	{
 	f = s + d;
-	printf("%ld, ", f);
+	printf("%lu, ", f);
 	s = d;
 	d = f;
 	}
@@ -33,7 +34,7 @@ int main(void)
 		h += 1;
 		l %= 10000000000;
 	}
-	printf("%ld%ld", h, l);
+	printf("%lu%lu", h, l);
 	if (g != 98)
 	printf(", ");
 	r = o;
