@@ -13,16 +13,16 @@ int main(void)
 	float d = 2;
 	float f, g, h;
 
-	printf("%f, ", s);
-	printf("%f, ", d);
+	printf("%d, ", s);
+	printf("%d, ", d);
 	for (g = 0; g < 25; g++)
 	{
 	f = s + d;
 	h = f;
-	printf("%f, ", f);
+	printf("%d, ", f);
 	f = h + d;
 	d = f;
-	printf("%f, ", d);
+	printf("%d, ", d);
 	s = h;
 	}
 	return (0);
