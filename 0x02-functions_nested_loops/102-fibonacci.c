@@ -18,7 +18,7 @@ int main(void)
 	for (g = 0; g < 50; g++)
 	{
 	f = s + d;
-	f = h;
+	h = f;
 	f = h + d;
 	d = f;
 	s = h;
