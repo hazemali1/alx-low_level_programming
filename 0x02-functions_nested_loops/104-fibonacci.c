@@ -9,20 +9,20 @@
 */
 int main(void)
 {
-	unsigned long long int s = 1;
-	unsigned long long int d = 2;
-	unsigned long long int f, g, h;
+	long long int s = 1;
+	long long int d = 2;
+	long long int f, g, h;
 
-	printf("%ld, ", s);
-	printf("%ld, ", d);
+	printf("%lld, ", s);
+	printf("%lld, ", d);
 	for (g = 0; g < 48; g++)
 	{
 	f = s + d;
 	h = f;
-	printf("%ld, ", f);
+	printf("%lld, ", f);
 	f = h + d;
 	d = f;
-	printf("%ld", d);
+	printf("%lld", d);
 	if (g < 47)
 	{
 	printf(", ");
