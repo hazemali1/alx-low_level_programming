@@ -11,7 +11,7 @@ int main(void)
 {
 	long int s = 1;
 	long int d = 2;
-	long int f, h, b;
+	long int f, h, b, v, m;
 
 	while (d <= 4000000)
 	{
@@ -20,10 +20,15 @@ int main(void)
 	f = h + d;
 	d = f;
 	s = h;
-	if (h % 2 == 0 && d % 2 == 0)
+	if (h % 2 == 0)
 	{
-	b = h + d;
+	v = h;
 	}
+	if (d % 2 == 0)
+	{
+	m = d;
+	}
+	b = v + m;
 	}
 	printf("%ld\n", b);
 	return (0);
