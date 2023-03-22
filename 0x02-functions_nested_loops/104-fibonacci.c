@@ -9,9 +9,9 @@
 */
 int main(void)
 {
-	long int s = 1;
-	long int d = 2;
-	long int f, g, h;
+	long unsigned int s = 1;
+	long unsigned int d = 2;
+	long unsigned int f, g, h;
 
 	printf("%ld, ", s);
 	printf("%ld, ", d);
@@ -23,7 +23,7 @@ int main(void)
 	f = h + d;
 	d = f;
 	printf("%ld", d);
-	if (d < 218922995834555169026)
+	if (g < 47)
 	{
 	printf(", ");
 	}
