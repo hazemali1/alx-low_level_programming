@@ -15,7 +15,7 @@ int main(void)
 
 	printf("%d, ", s);
 	printf("%d, ", d);
-	for (g = 0; g < 47; g++)
+	for (g = 0; g < 25; g++)
 	{
 	f = s + d;
 	h = f;
