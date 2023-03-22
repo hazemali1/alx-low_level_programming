@@ -19,10 +19,10 @@ int main(void)
 	{
 	f = s + d;
 	h = f;
+	printf("%d, ", f);
 	f = h + d;
 	d = f;
 	s = h;
-	printf("%d, ", f);
 	}
 	return (0);
 }
