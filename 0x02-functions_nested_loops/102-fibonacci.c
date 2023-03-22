@@ -17,8 +17,6 @@ int main(void)
 	printf("%d, ", d);
 	for (g = 0; g < 50; g++)
 	{
-	if (f <= 20365011074 && d <= 20365011074)
-	{
 	f = s + d;
 	h = f;
 	printf("%d, ", f);
@@ -26,7 +24,6 @@ int main(void)
 	d = f;
 	printf("%d, ", d);
 	s = h;
-	}
 	}
 	return (0);
 }
