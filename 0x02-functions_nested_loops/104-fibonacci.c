@@ -11,11 +11,11 @@ int main(void)
 {
 	long int s = 1;
 	long int d = 2;
-	long int f, g, h;
+	long int f, g, h, o, p, q, z;
 
 	printf("%ld, ", s);
 	printf("%ld, ", d);
-	for (g = 0; g < 48; g++)
+	for (g = 0; g < 44; g++)
 	{
 	f = s + d;
 	h = f;
@@ -23,9 +23,26 @@ int main(void)
 	f = h + d;
 	d = f;
 	printf("%ld", d);
-	if (g < 47)
-	{
 	printf(", ");
+	s = h;
+	}
+	for (l = 0; l < 4; l++)
+	{
+	f = s + d;
+	h = f;
+	o = f / 1000000000;
+	p = f % 1000000000;
+	printf("%ld", o);
+	printf("%ld, ", p);
+	f = h + d;
+	d = f;
+	q = d / 1000000000;
+	z = d % 1000000000;
+	printf("%ld", q);
+	printf("%ld, ", z);
+	if (l < 3)
+	{
+		printf(", ");
 	}
 	else
 	{
