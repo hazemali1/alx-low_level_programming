@@ -1,35 +1,22 @@
 #include "main.h"
-
 /**
- * jack_bauer - Print
+ * jack_bauer -print
  *
- * Description: Prints time
+ * Description: print time
  *
- * Return: Return 0 (sucess)
-*/
+ * Return: always 0 (sucess)
+ */
 void jack_bauer(void)
 {
-	int s, d, f, g;
-
-for (s = 0; s <= 2; s++)
-{
-for (d = 0; d <= 9; d++)
-{
-for (f = 0; f <= 5; f++)
-{
-for (g = 0; g <= 9; g++)
-{
-if ((s <= 2 && d <= 3) && (f <= 5 && g <= 9))
-{
-_putchar(s + '0');
-_putchar(d + '0');
-_putchar(':');
-_putchar(f + '0');
-_putchar(g + '0');
-_putchar('\n');
-}
-}
-}
-}
-}
-}
+	int m, h;
+	for (h = 0 ; h <= 23; h++)
+	{
+		for (m = 0; m <= 59; m++)
+		{
+			_putchar((h / 10) + 48);
+			_putchar((h % 10) + 48);
+			_putchar(':');
+			_putchar((m / 10) + 48);
+			_putchar((m % 10) + 48);
+			_putchar('\n');
+		}
