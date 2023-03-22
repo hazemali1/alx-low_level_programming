@@ -28,7 +28,7 @@ int main(void)
 	{
 	m = d;
 	}
-	b = v + m + 257,114;
+	b = v + m + 257114;
 	}
 	printf("%ld\n", b);
 	return (0);
