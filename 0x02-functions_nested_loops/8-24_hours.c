@@ -19,12 +19,15 @@ for (f = 0; f <= 5; f++)
 {
 for (g = 0; g <= 9; g++)
 {
+	if (s <= 2 && d <= 3 && f <= 5 && g <= 9)
+	{
 _putchar(s + '0');
 _putchar(d + '0');
 _putchar(':');
 _putchar(f + '0');
 _putchar(g + '0');
 _putchar('\n');
+}
 }
 }
 }
