@@ -32,18 +32,18 @@ int main(void)
 	p = d % 10000000000;
 	for (l = 0; l < 4; l++)
 	{
-	f = r + o;
-	w = u + p;
-	h = f;
-	x = w;
-	if (r + o > 9999999999)
+		if (r + o > 9999999999)
 	{
 		f++;
 	}
 	if (u + p > 9999999999)
-	{
+        {
 		w = w - 10;
 	}
+	f = r + o;
+	w = u + p;
+	h = f;
+	x = w;
 	printf("%ld", f);
 	printf("%ld, ", w);
 	f = o + h;
