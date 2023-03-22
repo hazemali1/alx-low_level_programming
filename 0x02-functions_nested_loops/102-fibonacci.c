@@ -22,6 +22,7 @@ int main(void)
 	printf("%d, ", f);
 	f = h + d;
 	d = f;
+	printf("%d, ", d);
 	s = h;
 	}
 	return (0);
