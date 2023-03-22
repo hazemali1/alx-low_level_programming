@@ -11,7 +11,7 @@ int main(void)
 {
 	long int s = 1;
 	long int d = 2;
-	long int f, g, h, o, p, q, z;
+	long int f, g, h, o, p, q, z, l;
 
 	printf("%ld, ", s);
 	printf("%ld, ", d);
