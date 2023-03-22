@@ -21,7 +21,9 @@ int main(void)
 	d = f;
 	s = h;
 	if (h % 2 == 0 && d % 2 == 0)
+	{
 	b = h + d;
+	}
 	}
 	printf("%ld\n", b);
 	return (0);
