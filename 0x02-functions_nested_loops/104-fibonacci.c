@@ -9,9 +9,9 @@
 */
 int main(void)
 {
-	[unsigned][long int] s = 1;
-	[unsigned][long int] d = 2;
-	[unsigned][long int] f, g, h;
+	unsigned long int s = 1;
+	unsigned long int d = 2;
+	unsigned long int f, g, h;
 
 	printf("%ld, ", s);
 	printf("%ld, ", d);
