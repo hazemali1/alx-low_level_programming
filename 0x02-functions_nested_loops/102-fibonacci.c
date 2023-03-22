@@ -9,20 +9,20 @@
 */
 int main(void)
 {
-	float s = 1;
-	float d = 2;
-	float f, g, h;
+	long int s = 1;
+	long int d = 2;
+	long int f, g, h;
 
-	printf("%d, ", s);
-	printf("%d, ", d);
+	printf("%ld, ", s);
+	printf("%ld, ", d);
 	for (g = 0; g < 25; g++)
 	{
 	f = s + d;
 	h = f;
-	printf("%d, ", f);
+	printf("%ld, ", f);
 	f = h + d;
 	d = f;
-	printf("%d, ", d);
+	printf("%ld, ", d);
 	s = h;
 	}
 	return (0);
