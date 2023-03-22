@@ -5,39 +5,40 @@
  *
  * Description: Time table
  *
+ *@n: Parameter
+ *
  * Return: Return o (sucess)
 */
 void print_times_table(int n)
 {
-	int f, s, d, u, q;
+	int f, s, d;
+
 	if (n <= 15 && n >= 0)
 	{
 	for (s = 0; s <= n; s++)
 	{
-	for (d = 0; d <= n; d++)
+	_putchar('0');
+	for (d = 1; d <= n; d++)
 	{
+	_putchar(',');
+	_putchar(' ');
 	f = s * d;
-	if (f > 9)
+	if (f <= 99)
+	_putchar(' ');
+	if (f <= 9)
+	_putchar(' ');
+	if (f >= 100)
 	{
-	u = f % 10;
-	q = (f - u) / 10;
-	_putchar(44);
-	_putchar(32);
-	_putchar(q + '0');
-	_putchar(u + '0');
+	_putchar((f / 100) + '0');
+	_putchar(((f / 10)) % 10 + '0');
 	}
-	else
+	else if (f <= 99 && f >= 10)
 	{
-	if (d != 0)
-	{
-	_putchar(44);
-	_putchar(32);
-	_putchar(32);
+	_putchar((f / 10) + '0');
 	}
-	_putchar(f + '0');
-	}
-	}
+	_putchar((f % 10) + '0');
 	}
 	_putchar('\n');
+	}
 	}
 }
