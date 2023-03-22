@@ -43,7 +43,7 @@ int main(void)
 	o = f;
 	p = w;
 	printf("%ld", o);
-	printf("%ld, ", p);
+	printf("%ld", p);
 	if (l < 3)
 	{
 		printf(", ");
