@@ -16,10 +16,10 @@ void times_table(void)
 	for (d = 0; d <= 9; d++)
 	{
 	f = s * d;
-	if (f <= 9)
+	if (f > 9)
 	{
 	u = f % 10;
-	q = (f - u);
+	q = (f - u) / 10;
 	_putchar(44);
 	_putchar(32);
 	_putchar(q + '0');
