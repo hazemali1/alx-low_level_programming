@@ -22,7 +22,15 @@ int main(void)
 	printf("%ld, ", f);
 	f = h + d;
 	d = f;
-	printf("%ld, ", d);
+	printf("%ld", d);
+	if (d < 20365011074)
+	{
+	printf(", ");
+	}
+	else
+	{
+		printf("\n");
+	}
 	s = h;
 	}
 	return (0);
