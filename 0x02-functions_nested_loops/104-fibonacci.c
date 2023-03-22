@@ -36,6 +36,14 @@ int main(void)
 	w = u + p;
 	h = f;
 	x = w;
+	if (f > 9999999999)
+	{
+		f++;
+	}
+	if (w > 9999999999)
+	{
+		w = w - 10;
+	}
 	printf("%ld", f);
 	printf("%ld, ", w);
 	f = o + h;
