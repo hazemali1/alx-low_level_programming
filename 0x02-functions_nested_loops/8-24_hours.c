@@ -15,10 +15,10 @@ for (s = 0; s <= 2; s++)
 for (d = 0; d <= 3; d++)
 for (f = 0; f <= 5; f++)
 for (g = 0; g <= 9; g++)
-_putchar(s);
-_putchar(d);
+_putchar(s + '0');
+_putchar(d + '0');
 _putchar(':');
-_putchar(f);
-_putchar(g);
+_putchar(f + '0');
+_putchar(g + '0');
 _putchar('\n');
 }
