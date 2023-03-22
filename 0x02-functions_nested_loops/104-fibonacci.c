@@ -11,7 +11,7 @@ int main(void)
 {
 	long int s = 1;
 	long int d = 2;
-	long int f, g, h, o, p, q, z, l;
+	long int f, g, h, o, p, q, z, l, r, x, w;
 
 	printf("%ld, ", s);
 	printf("%ld, ", d);
@@ -26,20 +26,24 @@ int main(void)
 	printf(", ");
 	s = h;
 	}
+	r = s / 1000000000;
+	u = s % 1000000000;
+	o = d / 1000000000;
+	p = d % 1000000000;
 	for (l = 0; l < 4; l++)
 	{
-	f = s + d;
+	f = r + o;
+	w = u + p;
 	h = f;
-	o = f / 1000000000;
-	p = f % 1000000000;
+	x = w;
+	printf("%ld", f);
+	printf("%ld, ", w);
+	f = o + h;
+	w = p + x;
+	o = f;
+	p = w;
 	printf("%ld", o);
 	printf("%ld, ", p);
-	f = h + d;
-	d = f;
-	q = d / 1000000000;
-	z = d % 1000000000;
-	printf("%ld", q);
-	printf("%ld, ", z);
 	if (l < 3)
 	{
 		printf(", ");
@@ -48,7 +52,8 @@ int main(void)
 	{
 		printf("\n");
 	}
-	s = h;
+	r = h;
+	u = x;
 	}
 	return (0);
 }
