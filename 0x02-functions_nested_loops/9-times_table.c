@@ -11,10 +11,10 @@ void times_table(void)
 {
 	int f, s, d;
 
-for (s = 48; s <= 57; s++)
+for (s = 0; s <= 9; s++)
 {
 	_putchar(48);
-for (d = 48; d <= 57; d++)
+for (d = 1; d <= 9; d++)
 {
 	_putchar(',');
 	_putchar(' ');
