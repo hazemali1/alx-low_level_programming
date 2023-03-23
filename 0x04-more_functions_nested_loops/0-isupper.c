@@ -5,6 +5,8 @@
  *
  * Description: Checks
  *
+ * @c: parameter
+ *
  * Return: Returns 1,0 (sucess)
 */
 int _isupper(int c)
