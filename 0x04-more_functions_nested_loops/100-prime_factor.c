@@ -19,6 +19,6 @@ int main(void)
 	d = f / s;
 	}
 	}
-	printf("ld\n", d);
+	printf("%ld\n", d);
 	return (0);
 }
