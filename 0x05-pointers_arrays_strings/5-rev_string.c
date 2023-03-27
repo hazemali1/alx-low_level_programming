@@ -12,7 +12,6 @@
 void rev_string(char *s)
 {
 	int p = 1, o, f, d = 0;
-	char a[1000];
 
 	while (s[d] != '\0')
 	{
@@ -22,7 +21,7 @@ void rev_string(char *s)
 	{
 		for (o = p - 1; o < p; o++)
 		{
-		s[o] = a[f];
+		s[o] = s[f];
 		}
 	p++;
 	}
