@@ -11,7 +11,7 @@
 */
 void rev_string(char *s)
 {
-	int p = 1, o, f, d = 0;
+	int p = 1, o, f, d;
 
 	d = _strlen(s);
 	for (f = d - 1; f >= 0; f--)
