@@ -11,7 +11,7 @@
 */
 void puts2(char *str)
 {
-while (*str != '\0' && *str != '\')
+while (*str != '\0' && *str != "\\" && *str != '\\')
 {
 	_putchar(*str);
 	str = str + 2;
