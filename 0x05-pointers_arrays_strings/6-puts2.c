@@ -11,10 +11,16 @@
 */
 void puts2(char *str)
 {
-while (*str != '\0' && *str != '\\')
+	int r = 0;
+
+while (*str != '\0')
 {
+	if (r < 223)
+	{
 	_putchar(*str);
+	}
 	str = str + 2;
+	r++;
 }
 _putchar('\n');
 }
