@@ -11,14 +11,19 @@
 */
 void rev_string(char *s)
 {
-        int f, d = 0;
+	int p = 1, o, f, d = 0;
+	char a[];
 
-        while (s[d] != '\0')
-        {
-                d++;
-        }
-        for (f = d - 1; f >= 0; f--)
-        {
-		s[] = s[f];
-        }
+	while (s[d] != '\0')
+	{
+		d++;
+	}
+	for (f = d - 1; f >= 0; f--)
+	{
+		for (o = p - 1; o < p; o++)
+		{
+		a[o] = s[f];
+		}
+	p++;
+	}
 }
