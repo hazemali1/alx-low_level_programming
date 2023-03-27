@@ -13,10 +13,7 @@ void rev_string(char *s)
 {
 	int p = 1, o, f, d = 0;
 
-	while (s[d] != '\0')
-	{
-		d++;
-	}
+	d = _strlen(s);
 	for (f = d - 1; f >= 0; f--)
 	{
 		for (o = p - 1; o < p; o++)
