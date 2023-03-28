@@ -11,15 +11,15 @@
 */
 void rev_string(char *s)
 {
-	int p = 1, o, f, d;
+	int f = 0, d = 0;
+	char c;
 
-	d = _strlen(s);
-	for (f = d - 1; f >= 0; f--)
+	while (s[d++])
+		f++;
+	for (d = f - 1; d >= f / 2; d--)
 	{
-		for (o = p - 1; o < p; o++)
-		{
-		s[o] = s[f];
-		}
-	p++;
+		c = s[d];
+		s[d] = s[f - d - 1];
+		s[f - d - 1] = c;
 	}
 }
