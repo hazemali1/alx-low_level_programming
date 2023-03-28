@@ -18,6 +18,7 @@ void print_array(int *a, int n)
 	for (s = 0; s < n; s++)
 	{
 		_putchar(a[s]);
+		printf(", ");
 	}
 	printf("\n");
 }
