@@ -12,13 +12,6 @@
 */
 char *_strcpy(char *dest, char *src)
 {
-	if (*dest == '\0')
-	{
-	*dest = *src;
-	}
-	else
-	{
 	dest[0] = *src;
-	}
 	return (src);
 }
