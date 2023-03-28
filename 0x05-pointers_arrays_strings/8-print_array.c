@@ -13,6 +13,11 @@
 */
 void print_array(int *a, int n)
 {
-	printf("%d, ", a[n]);
+	int s;
+
+	for (s = 0; s < n; s++)
+	{
+		_putchar(a[s]);
+	}
 	printf("\n");
 }
