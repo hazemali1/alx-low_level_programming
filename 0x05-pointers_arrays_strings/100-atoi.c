@@ -11,7 +11,7 @@
 */
 int _atoi(char *s)
 {
-	int d = 0, e = 0, *a;
+	int d = 0, e = 0, a[];
 
 	while (s[d] != '\0')
 	{
@@ -22,5 +22,5 @@ int _atoi(char *s)
 	d++;
 	e++;
 	}
-	*s = *a;
+	s[] = a[];
 }
