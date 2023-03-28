@@ -20,6 +20,7 @@ void puts_half(char *str)
 	if (d % 2 == 1)
 	{
 		f = (d - 1) / 2;
+		f += 1;
 	}
 	else
 	{
