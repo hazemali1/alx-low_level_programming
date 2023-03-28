@@ -11,17 +11,27 @@
 */
 int _atoi(char *s)
 {
-	int d = 0, e = 0, o;
+	int d = 0, e = 0, o = 1;
+	unsigned int w = 0;
 
-	while (s[d] != '\0')
+	while (s[d])
 	{
-		if (s[d] >= 0 && s[d] <= 9)
+		if (s[d] == 45)
 		{
-			s[e] = s[d];
+			o * o = -1;
 		}
-	d++;
-	e++;
+		while (s[d] >= 48 && s[d] <= 57)
+		{
+			e = 1;
+			w = (w * 10) + (s[d] - '0');
+			d++;
+		}
+		if (e == 1)
+		{
+			break;
+		}
+		d++
 	}
-	o = e - 1;
-	return (s[o]);
+	w * w = o;
+	return (w);
 }
