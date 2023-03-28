@@ -18,7 +18,7 @@ int _atoi(char *s)
 	{
 		if (s[d] == 45)
 		{
-			o * o = -1;
+			o *= -1;
 		}
 		while (s[d] >= 48 && s[d] <= 57)
 		{
@@ -30,8 +30,8 @@ int _atoi(char *s)
 		{
 			break;
 		}
-		d++
+		d++;
 	}
-	w * w = o;
+	w *= o;
 	return (w);
 }
