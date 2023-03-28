@@ -23,4 +23,5 @@ int _atoi(char *s)
 	e++;
 	}
 	s[e] = a[e];
+	return (0);
 }
