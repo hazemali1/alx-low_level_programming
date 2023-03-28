@@ -12,6 +12,6 @@
 */
 char *_strcpy(char *dest, char *src)
 {
-	*dest = *src;
+	*dest = *src + '\0';
 	return (src);
 }
