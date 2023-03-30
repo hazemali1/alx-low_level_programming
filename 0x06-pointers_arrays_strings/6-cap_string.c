@@ -15,7 +15,7 @@ char *cap_string(char *str)
 
 while (str[s] != '\0')
 {
-	if (str[s] >= 32 && str[s] <= 44  || str[s] == 59 || str[s] == 63 || str[s] == '{' || str[s] == '}' || str[s] == '.' || str[s] == '\n' || str[s] == '\t')
+	if ((str[s] >= 32 && str[s] <= 44) || str[s] == 59 || str[s] == 63 || str[s] == '{' || str[s] == '}' || str[s] == '.' || str[s] == '\n' || str[s] == '\t')
 	{
 		if (str[s + 1] >= 97 && str[s + 1] <= 122)
 		{
