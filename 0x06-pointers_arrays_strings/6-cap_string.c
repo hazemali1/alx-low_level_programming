@@ -28,7 +28,6 @@ while (str[s] != '\0')
 		}
 	}
 	else
-
 	{
 		str[s] = str[s];
 	}
