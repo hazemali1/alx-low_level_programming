@@ -30,8 +30,11 @@ char *_strncat(char *dest, char *src, int n)
 	}
 	for (u = 0; u <= n - 1; u++)
 	{
+		if (u <= r)
+		{
 		dest[d] = src[u];
 		d++;
+		}
 	}
 	return (dest);
 }
