@@ -18,12 +18,11 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		int q = 0;
 
-		while (s[q] != '\0')
+		while (s[q] != '\0' && s[q] != 32)
 		{
 			if (s[q] == accept[w])
 			{
 				d++;
-				break;
 			}
 			q++;
 		}
