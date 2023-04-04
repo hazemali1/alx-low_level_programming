@@ -29,5 +29,9 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		w++;
 	}
+	if (accept[w] == '\0')
+	{
+		d++;
+	}
 	return (d * sizeof(*s));
 }
