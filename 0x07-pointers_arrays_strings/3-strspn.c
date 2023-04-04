@@ -29,5 +29,5 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		w++;
 	}
-	return (d * sizeof(*s));
+	return (d);
 }
