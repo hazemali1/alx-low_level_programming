@@ -11,3 +11,4 @@ int loop(int s, int d);
 int is_palindrome(char *s);
 int lenght(char *s);
 int haha(char *s, int e, int i, int q);
+int wildcmp(char *s1, char *s2);
