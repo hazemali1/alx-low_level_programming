@@ -33,5 +33,5 @@ int tired(int s, int d)
 */
 int _sqrt_recursion(int n)
 {
-	tired(n, 1);
+	return (tired(n, 1));
 }
