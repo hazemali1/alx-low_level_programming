@@ -16,7 +16,7 @@ int tired(int s, int d)
 	}
 	else if (s > d * d)
 	{
-		tired(s, d + 1);
+		return (tired(s, d + 1));
 	}
 	else
 	{
