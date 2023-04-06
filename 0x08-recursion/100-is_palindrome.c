@@ -35,7 +35,7 @@ int haha(char *s, int e, int i, int q)
 	{
 		if (s[e] == s[i])
 		{
-			haha(s, e + 1, i - 1, q)
+			return (haha(s, e + 1, i - 1, q));
 		}
 		else if (e > i)
 		{
