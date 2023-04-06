@@ -10,11 +10,7 @@
 */
 int loop(int s, int d)
 {
-	if (s < 0)
-	{
-		s = s * -1;
-	}
-	if (s == 0 || s == 1)
+	if (s == 0 || s == 1 || s < 0)
 	{
 		return (0);
 	}
