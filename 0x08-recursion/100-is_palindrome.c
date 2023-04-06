@@ -46,6 +46,7 @@ int haha(char *s, int e, int i, int q)
 			return (0);
 		}
 	}
+	return (1);
 }
 
 /**
