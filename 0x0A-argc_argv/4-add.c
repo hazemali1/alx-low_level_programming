@@ -1,5 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+/**
+ * check - checking if it's digit
+ *
+ * @s: Parameter
+ *
+ * Return: Return 0,1
+*/
+int check(char *s)
+{
+	unsigned int d = 0;
+
+	while (d < strlen(s))
+	{
+		if (!isdigit(s[d]))
+		{
+			return (0);
+		}
+	d++;
+	}
+	return (1);
+}
 
 /**
  * main - Print
@@ -20,13 +43,16 @@ int main(int argc, char *argv[])
 	}
 	for (s = 1; s < argc; s++)
 	{
+		if (check(argv[s]))
+		{
 		q = atoi(argv[s]);
-			if (q == 0)
-			{
-				printf("Error\n");
-				return (1);
-			}
 		d = d + q;
+		}
+		else
+		{
+			printf("Error\n");
+			return (1);
+		}
 	}
 	printf("%d\n", d);
 	return (0);
