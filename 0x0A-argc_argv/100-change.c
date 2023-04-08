@@ -9,42 +9,45 @@
  *
  * Return: Return 0,1
 */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int s;
-	int d = 0;
+	int s, d = 0, w;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	s = atoi(argv[2]);
-	while (s >= 25)
+	else
 	{
-		s = s - 25;
-		d++;
+	s = atoi(argv[1]);
+	w = s;
+	while (w >= 25)
+	{
+		w = w - 25;
+		d = d + 1;
 	}
-	while (s >= 10)
+	while (w >= 10)
 	{
-		s = s - 10;
-		d++;
+		w = w - 10;
+		d = d + 1;
 	}
-	while (s >= 5)
+	while (w >= 5)
 	{
-		s = s - 5;
-		d++;
+		w = w - 5;
+		d = d + 1;
 	}
-	while (s >= 2)
+	while (w >= 2)
 	{
-		s = s - 2;
-		d++;
+		w = w - 2;
+		d = d + 1;
 	}
-	while (s >= 1)
+	while (w >= 1)
 	{
-		s = s - 1;
-		d++;
+		w = w - 1;
+		d = d + 1;
 	}
 	printf("%d\n", d);
-	return (0);
+	}
+return (0);
 }
