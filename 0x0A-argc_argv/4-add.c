@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	for (s = 1; s < argc; s++)
 	{
 		q = atoi(argv[s]);
-			if (q < 48 && q > 57)
+			if (q == 0)
 			{
 				printf("Error\n");
 				return (1);
