@@ -14,19 +14,11 @@ char *str_concat(char *s1, char *s2)
 	char *s;
 	int d = 0, e, w = 0, u = 0;
 
-	if (s1[0] == '\0')
-	{
-		s1[0] = "";
-	}
-	if (s2[0] == '\0')
-	{
-		s2[0] = "";
-	}
-	while (s1[d] != '\0')
+	while (s1[d] >= '\0')
 	{
 		d++;
 	}
-	while (s2[w] != '\0')
+	while (s2[w] >= '\0')
 	{
 		w++;
 	}
