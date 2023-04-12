@@ -12,7 +12,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *s;
-	char *q = "";
+	char *q = " ";
 	int d = 0, e, w = 0, u = 0;
 
 	while (s1[d] != '\0')
