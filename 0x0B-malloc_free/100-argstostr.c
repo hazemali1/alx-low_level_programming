@@ -48,14 +48,8 @@ char *argstostr(int ac, char **av)
 	for (d = 0; d < ac; d++)
 	{
 		for (e = 0; e < (lenght(av[d])); e++)
-		{
 			for (r = 0; r < (q + ac); r++)
-			{
-				{
 					s[r] = av[d][e];
-				}
-			}
-		}
 	}
 	s[r] = '\0';
 	return (s);
