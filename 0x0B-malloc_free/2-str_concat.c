@@ -29,19 +29,19 @@ char *str_concat(char *s1, char *s2)
 	}
 	for (e = 0; e < (d + w); e++)
 	{
-		if (s1[e] == NULL)
+		if (s1[e] == 0)
 		{
-			if (s2[e] == NULL)
+			if (s2[e] == '\0')
 			{
 				s[e] = "";
 			}
 			s[e] = s2[e];
 		}
-		if else (s2[e] == NULL)
+		else if (s2[e] == NULL)
 		{
 			s[e] = s1[e];
 		}
-		if else (e < d)
+		else if (e < d)
 		{
 		s[e] = s1[e];
 		}
