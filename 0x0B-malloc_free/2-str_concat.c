@@ -29,7 +29,8 @@ char *str_concat(char *s1, char *s2)
 	}
 	if (s1[0] == '\0' && s2[0] == '\0')
 	{
-		return ("o");
+		s[0] = "o";
+		return (s);
 	}
 	for (e = 0; e < (d + w); e++)
 	{
