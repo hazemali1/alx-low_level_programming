@@ -18,17 +18,9 @@ char *str_concat(char *s1, char *s2)
 	{
 		d++;
 	}
-	if (s1 == NULL)
-	{
-		*s1 = 32;
-	}
 	while (s2[w] != '\0')
 	{
 		w++;
-	}
-	if (s2 == NULL)
-	{
-		*s2 = 32;
 	}
 	s = (char *)malloc((sizeof(char) * (d + w)) + 1);
 	if (s == NULL)
