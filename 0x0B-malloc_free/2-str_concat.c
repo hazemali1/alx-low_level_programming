@@ -23,7 +23,11 @@ char *str_concat(char *s1, char *s2)
 		w++;
 	}
 	s = malloc((sizeof(*s) * (d + w)) + 1);
-	for (e = 0; e < (d + w); e++)
+	if (s == NULL)
+	{
+		return (NULL);
+	}
+	for (e = 0; e <= (d + w); e++)
 	{
 		if (e < d)
 		{
