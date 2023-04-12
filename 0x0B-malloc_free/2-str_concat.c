@@ -27,11 +27,8 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	if (s1[0] == '\0' && s2[0] == '\0')
+	if (d > 0 && w > 0)
 	{
-		s[0] = "o";
-		return (s);
-	}
 	for (e = 0; e < (d + w); e++)
 	{
 		if (e < d)
@@ -43,6 +40,7 @@ char *str_concat(char *s1, char *s2)
 		s[e] = s2[u];
 		u++;
 		}
+	}
 	}
 	return (s);
 }
