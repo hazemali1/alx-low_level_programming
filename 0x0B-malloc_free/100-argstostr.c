@@ -12,10 +12,9 @@ int lenght(char *str)
 {
 	int d = 0;
 
-	while(*str != '\0')
+	while (str[d] != '\0')
 	{
 		d++;
-		str++;
 	}
 	return (d);
 }
