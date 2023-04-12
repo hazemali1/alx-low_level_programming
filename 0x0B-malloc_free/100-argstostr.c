@@ -51,7 +51,6 @@ char *argstostr(int ac, char **av)
 		{
 			for (r = 0; r < (q + ac); r++)
 			{
-				else
 				{
 					s[r] = av[d][e];
 				}
