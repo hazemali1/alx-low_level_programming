@@ -27,7 +27,7 @@ int **alloc_grid(int width, int height)
 			return (NULL);
 		}
 	}
-	if (s == 0)
+	if (s == NULL || s[d] == NULL)
 	{
 		return (NULL);
 	}
