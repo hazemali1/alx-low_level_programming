@@ -33,11 +33,11 @@ char *str_concat(char *s1, char *s2)
 		{
 			if (s2[e] == '\0')
 			{
-				s[e] = "";
+				s[e] = '\0';
 			}
 			s[e] = s2[e];
 		}
-		else if (s2[e] == NULL)
+		else if (s2[e] == 0)
 		{
 			s[e] = s1[e];
 		}
