@@ -27,6 +27,10 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
+	if (s1[0] == NULL && s2[0] == NULL)
+	{
+		return ("");
+	}
 	for (e = 0; e < (d + w); e++)
 	{
 		if (e < d)
