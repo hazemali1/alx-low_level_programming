@@ -22,6 +22,10 @@ char *argstostr(int ac, char **av)
 	for (d = 0; d < ac; d++)
 	{
 		s[d] = (char *)malloc(sizeof(char) * 9);
+		if (s[d] == NULL)
+		{
+			return (NULL);
+		}
 	}
 	if (s == NULL)
 	{
@@ -29,7 +33,7 @@ char *argstostr(int ac, char **av)
 	}
 	for (d = 0; d < ac; d++)
 	{
-		s[d] = av[d];
+		s[d][9] = av[d];
 	}
 	return (s);
 }
