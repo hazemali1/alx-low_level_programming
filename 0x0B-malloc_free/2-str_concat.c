@@ -22,6 +22,7 @@ char *str_concat(char *s1, char *s2)
 	if (*s1 == 0)
 	{
 		s1 = q;
+		d++;
 	}
 	while (s2[w] != '\0')
 	{
@@ -30,6 +31,7 @@ char *str_concat(char *s1, char *s2)
 	if (*s2 == 0)
 	{
 		s2 = q;
+		w++;
 	}
 	s = (char *)malloc((sizeof(char) * (d + w)) + 1);
 	if (s == NULL)
