@@ -14,6 +14,14 @@ char *str_concat(char *s1, char *s2)
 	char *s;
 	int d = 0, e, w = 0, u = 0;
 
+	if (s1 == NULL)
+	{
+		s1 = "\0";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "\0";
+	}
 	while (s1[d] != '\0')
 	{
 		d++;
@@ -39,5 +47,6 @@ char *str_concat(char *s1, char *s2)
 		u++;
 		}
 	}
+	s[e] = '\0';
 	return (s);
 }
