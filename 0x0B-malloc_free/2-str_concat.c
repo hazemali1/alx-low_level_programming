@@ -27,9 +27,21 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	for (e = 0; e <= (d + w); e++)
+	for (e = 0; e < (d + w); e++)
 	{
-		if (e < d)
+		if (s1[e] == NULL)
+		{
+			if (s2[e] == NULL)
+			{
+				s[e] = "";
+			}
+			s[e] = s2[e];
+		}
+		if else (s2[e] == NULL)
+		{
+			s[e] = s1[e];
+		}
+		if else (e < d)
 		{
 		s[e] = s1[e];
 		}
