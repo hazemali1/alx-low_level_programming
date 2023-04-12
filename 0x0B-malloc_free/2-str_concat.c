@@ -12,25 +12,24 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *s;
-	char *q = " ";
 	int d = 0, e, w = 0, u = 0;
 
 	while (s1[d] != '\0')
 	{
 		d++;
 	}
-	if (*s1 == NULL)
+	if (*s1 == '\0')
 	{
-		s1 = q;
+		*s1 = 0;
 		d++;
 	}
 	while (s2[w] != '\0')
 	{
 		w++;
 	}
-	if (*s2 == NULL)
+	if (*s2 == '\0')
 	{
-		s2 = q;
+		*s2 = 0;
 		w++;
 	}
 	s = (char *)malloc((sizeof(char) * (d + w)) + 1);
