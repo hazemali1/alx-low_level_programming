@@ -30,7 +30,7 @@ int lenght(char *str)
 */
 char *argstostr(int ac, char **av)
 {
-	int d, q = 0;
+	int d, q = 0, e, r;
 	char *s;
 
 	if (ac == 0 || av == NULL)
