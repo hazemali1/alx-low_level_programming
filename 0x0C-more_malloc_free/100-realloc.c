@@ -32,7 +32,7 @@ void *helping(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 		return (NULL);
 	}
-	return (ptr);
+	return (NULL);
 }
 
 /**
@@ -49,7 +49,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	void *s;
 	unsigned int d;
 
-	if (new_size <= old_size || new_size == 0)
+	if ((new_size == 0 && ptr !=NULL) || ptr == NULL || new_size == old_size)
 	{
 		s = helping(ptr, old_size, new_size);
 	}
