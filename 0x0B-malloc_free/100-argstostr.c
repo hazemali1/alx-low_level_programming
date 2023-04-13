@@ -29,7 +29,7 @@ int lenght(char *str)
 */
 char *argstostr(int ac, char **av)
 {
-	int d, q = 0, e, r;
+	int d, q = 0, e, r = 0;
 	char *s;
 
 	if (ac == 0 || av == NULL)
@@ -49,6 +49,7 @@ char *argstostr(int ac, char **av)
 	{
 		for (e = 0; av[d][e] != '\0'; e++, r++)
 			s[r] = av[d][e];
+
 		s[r] = '\n';
 		r++;
 	}
