@@ -10,16 +10,19 @@
 */
 int size(char *str)
 {
-	int size = 0, d = 0;
+	int size, d = 0;
 
-	while (str[size] != '\0')
+	for (size = 0; str[size]; size++)
 	{
-		if (str[size] != ' ')
+		if (str[size] == ' ')
 		{
-			d++;
+			if (str[size + 1] != ' ' && str[size + 1] != '\0')
+				d++;
 		}
-	size++;
+		else if (size == 0)
+			d++;
 	}
+	d++;
 	return (d);
 }
 
@@ -35,13 +38,16 @@ char **strtow(char *str)
 	int d, f = 0, r, n = 0, e, o;
 	char **s;
 
-	if (str == NULL || *str == '\0' || size(str) == 0)
+	if (str == NULL || *str == '\0')
 		return (NULL);
 	n = size(str);
-	s = (char **)malloc(sizeof(char *) * (n + 1));
+	if (n == 1)
+		return (NULL);
+	s = (char **)malloc(sizeof(char *) * n);
 	if (s == NULL)
 		return (NULL);
-	s[n] = NULL;
+	s[n - 1] = NULL;
+	d = 0;
 	while (str[d])
 	{
 		if (str[d] != ' ' && (d == 0 || str[d - 1] == ' '))
@@ -55,14 +61,12 @@ char **strtow(char *str)
 		{
 			for (e = 0; e < f; e++)
 				free(s[e]);
-			free(s[n]);
+			free(s[n - 1]);
 			free(s);
 			return (NULL);
 		}
 		for (o = 0; o < r; o++)
-		{
-			s[f][o] = str[d + 1];
-		}
+			s[f][o] = str[d + o];
 		s[f][o] = '\0';
 		f++;
 		d = d + r;
