@@ -32,7 +32,7 @@ int size(char *str)
 */
 char **strtow(char *str)
 {
-	int d = 0, f = 0, r, n, e, o;
+	int d, f = 0, r, n = 0, e, o;
 	char **s;
 
 	if (str == NULL || *str == '\0' || size(str) == 0)
@@ -50,12 +50,16 @@ char **strtow(char *str)
 	{
 		if (str[d] != ' ' && (d == 0 || str[d - 1] == ' '))
 		{
-			for (r = 1; str[d + r] != ' '; r++)
-			s[f] = (char *)malloc(sizeof(char) * (r + 1));
+			for (r = 1; str[d + r] != ' ' && str[d + r]; r++)
+				;
+			r++;
+			s[f] = (char *)malloc(sizeof(char) * r);
+			r--;
 		if (s[f] == NULL)
 		{
 			for (e = 0; e < f; e++)
 				free(s[e]);
+			free(s[n]);
 			free(s);
 			return (NULL);
 		}
