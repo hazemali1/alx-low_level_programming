@@ -31,9 +31,10 @@ int lenght(char *s1)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *s;
-	int d = lenght(s1);
+	int d;
 	int e, r = 0;
 
+	d = lenght(s1);
 	if (s1 == NULL)
 	{
 		s1 = "\0";
