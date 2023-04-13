@@ -35,14 +35,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int e, r = 0;
 
 	d = lenght(s1);
-	if (s1 == NULL)
-	{
-		s1 = "\0";
-	}
-	if (s2 == NULL)
-	{
-		s2 = "\0";
-	}
 	s = malloc((sizeof(*s) * (n + d)) + 1);
 	if (s == NULL)
 	{
