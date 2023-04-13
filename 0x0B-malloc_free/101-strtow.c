@@ -28,7 +28,7 @@ int size(char *str)
  *
  * @str: Parameter
  *
- * @Return: Return leght
+ * Return: Return leght
 */
 int lenght(char *str)
 {
@@ -57,11 +57,11 @@ char **strtow(char *str)
 	int d, f = 0, r = 0;
 	char **s;
 
-	if (str == NULL)
+	if (str == NULL || *str == '\0')
 	{
 		return (NULL);
 	}
-	s = (char **)malloc(sizeof(char *) * (lenght(str)));
+	s = (char **)malloc(sizeof(char *) * (size(str)));
 	for (d = 0; d < (lenght(str)); d++)
 	{
 		s[d] = (char *)malloc(sizeof(char) * (size(str) / lenght(str)));
