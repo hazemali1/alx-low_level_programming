@@ -47,22 +47,21 @@ void *helping(void *ptr, unsigned int old_size, unsigned int new_size)
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *s;
-	unsigned int d, r = 0;
+	unsigned int d;
 
 	ptr = helping(ptr, old_size, new_size);
 	if (new_size > old_size)
 	{
-		s = malloc(new_size - old_size);
+		s = malloc(new_size);
 		if (s == NULL)
 		{
 			return (NULL);
 		}
-		for (d = old_size; d < new_size; d++)
+		for (d = 0; d < old_size && d < new_size; d++)
 		{
-			*((char *)ptr + d) = *((char *)s + r);
-			r++;
+			*((char *)s + d) = *((char *)ptr + d);
 		}
 		free(ptr);
 	}
-	return (ptr);
+	return (s);
 }
