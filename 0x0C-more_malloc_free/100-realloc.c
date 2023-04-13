@@ -62,11 +62,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 			*((char *)ptr + d) = *((char *)s + r);
 			r++;
 		}
-	}
-	if (ptr == NULL)
-	{
 		free(ptr);
-		return (NULL);
 	}
 	return (ptr);
 }
