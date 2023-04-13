@@ -49,7 +49,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	void *s;
 	unsigned int d;
 
-	if (new_size <= old_size)
+	if (new_size <= old_size || new_size == 0)
 	{
 		s = helping(ptr, old_size, new_size);
 	}
