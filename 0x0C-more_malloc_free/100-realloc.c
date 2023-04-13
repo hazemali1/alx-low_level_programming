@@ -1,6 +1,15 @@
 #include <stdlib.h>
 #include "main.h"
 
+/**
+ * helping - Realloc
+ *
+ * @ptr: Parameter1
+ * @old_size: Parameter2
+ * @new_size: Parameter3
+ *
+ * Return: Return pointer
+*/
 char *helping(char *ptr, unsigned int old_size, unsigned int new_size)
 {
 	char *w;
