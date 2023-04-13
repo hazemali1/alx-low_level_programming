@@ -10,9 +10,9 @@
  *
  * Return: Return pointer
 */
-char *helping(char *ptr, unsigned int old_size, unsigned int new_size)
+void *helping(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *w;
+	void *w;
 
 	if (new_size == old_size)
 	{
@@ -44,9 +44,9 @@ char *helping(char *ptr, unsigned int old_size, unsigned int new_size)
  *
  * Return: Return pointer
 */
-char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size)
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *s;
+	void *s;
 	unsigned int d, r = 0;
 
 	ptr = helping(ptr, old_size, new_size);
@@ -59,7 +59,7 @@ char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size)
 		}
 		for (d = old_size; d < new_size; d++)
 		{
-			ptr[d] = s[r];
+			*((char *)ptr + d) = *((char *)s + r);
 			r++;
 		}
 	}
