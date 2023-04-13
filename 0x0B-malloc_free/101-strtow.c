@@ -24,28 +24,6 @@ int size(char *str)
 }
 
 /**
- * lenght - Lenght
- *
- * @str: Parameter
- *
- * Return: Return leght
-*/
-int lenght(char *str)
-{
-	int size = 0, d = 0;
-
-	while (str[size] != '\0')
-	{
-		if (str[size] == ' ' && str[size + 1] != ' ')
-		{
-			d++;
-		}
-	size++;
-	}
-	return (d);
-}
-
-/**
  * strtow - Words
  *
  * @str: Parameter
@@ -54,39 +32,43 @@ int lenght(char *str)
 */
 char **strtow(char *str)
 {
-	int d, f = 0, r = 0;
+	int d = 0, f = 0, r, n, e, o;
 	char **s;
 
 	if (str == NULL || *str == '\0' || size(str) == 0)
 	{
 		return (NULL);
 	}
-	s = (char **)malloc(sizeof(char *) * (size(str)));
-	for (d = 0; d < (lenght(str)); d++)
-	{
-		s[d] = (char *)malloc(sizeof(char) * (size(str) / lenght(str)));
-		if (s[d] == 0)
-		{
-			return (NULL);
-		}
-	}
-	if (s == 0)
+	n = size(str);
+	s = (char **)malloc(sizeof(char *) * (n + 1));
+	if (s == NULL)
 	{
 		return (NULL);
 	}
-	while (str[d] != '\0')
+	s[n] = NULL;
+	while (str[d])
 	{
-		if (str[d] != ' ')
+		if (str[d] != ' ' && (d == 0 || str[d - 1] == ' '))
 		{
-			while (str[d] != ' ')
-			{
-				s[f][r] = str[d];
-			d++;
-			}
+			for (r = 1; str[d + r] != ' '; r++)
+			s[f] = (char *)malloc(sizeof(char) * (r + 1));
+		if (s[f] == NULL)
+		{
+			for (e = 0; e < f; e++)
+				free(s[e]);
+			free(s);
+			return (NULL);
 		}
-		s[f][r] = '\0';
-	d++;
+		for (o = 0; o < r; o++)
+		{
+			s[f][o] = str[d + 1];
+		}
+		s[f][o] = '\0';
+		f++;
+		d = d + r;
+		}
+		else
+			d++;
 	}
-	s[f][r] = '\0';
 	return (s);
 }
