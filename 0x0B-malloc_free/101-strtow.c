@@ -36,15 +36,11 @@ char **strtow(char *str)
 	char **s;
 
 	if (str == NULL || *str == '\0' || size(str) == 0)
-	{
 		return (NULL);
-	}
 	n = size(str);
 	s = (char **)malloc(sizeof(char *) * (n + 1));
 	if (s == NULL)
-	{
 		return (NULL);
-	}
 	s[n] = NULL;
 	while (str[d])
 	{
