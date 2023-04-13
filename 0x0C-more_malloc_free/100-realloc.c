@@ -49,7 +49,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	void *s;
 	unsigned int d;
 
-	ptr = helping(ptr, old_size, new_size);
+	s = helping(ptr, old_size, new_size);
 	if (new_size > old_size)
 	{
 		s = malloc(new_size);
