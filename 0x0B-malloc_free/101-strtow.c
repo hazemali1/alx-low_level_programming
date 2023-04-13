@@ -78,8 +78,11 @@ char **strtow(char *str)
 	{
 		if (str[d] != ' ')
 		{
-			for (; str[d] != ' '; d++)
+			while (str[d] != ' ')
+			{
 				s[f][r] = str[d];
+			d++;
+			}
 		}
 		s[f][r] = '\0';
 	d++;
