@@ -13,7 +13,7 @@
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *w, *s;
-	int d, r = 0;
+	unsigned int d, r = 0;
 
 	if (new_size == old_size)
 		return (NULL);
@@ -26,7 +26,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 		return (NULL);
 	if (new_size > old_size)
-		s = melloc(sizeof(*ptr) * (new_size - old_size));
+		s = malloc(sizeof(*ptr) * (new_size - old_size));
 		if (s == NULL)
 			return (NULL);
 		for (d = old_size; d < new_size; d++)
