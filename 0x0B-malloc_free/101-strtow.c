@@ -14,7 +14,7 @@ int size(char *str)
 
 	while (str[size] != '\0')
 	{
-		if (str[size] != 32)
+		if (str[size] != ' ')
 		{
 			d++;
 		}
@@ -36,7 +36,7 @@ int lenght(char *str)
 
 	while (str[size] != '\0')
 	{
-		if (str[size] == 32 && str[size + 1] != 32)
+		if (str[size] == ' ' && str[size + 1] != ' ')
 		{
 			d++;
 		}
@@ -76,9 +76,9 @@ char **strtow(char *str)
 	}
 	while (str[d] != '\0')
 	{
-		if (str[d] != 32)
+		if (str[d] != ' ')
 		{
-			for (; str[d] != 32; d++)
+			for (; str[d] != ' '; d++)
 				s[f][r] = str[d];
 		}
 		s[f][r] = '\0';
