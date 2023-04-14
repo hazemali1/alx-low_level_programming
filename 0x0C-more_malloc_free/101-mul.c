@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
 		return (1);
 	for (i = 0; i <= len1 + len2; i++)
 		result[i] = 0;
-	for (len1 = len1 - 1; len1 >= 0; len--)
+	for (len1 = len1 - 1; len1 >= 0; len1--)
 	{
 		digit1 = s1[len1] - '0';
 		carry = 0;
@@ -95,7 +95,7 @@ int main(int argc, char *argv[])
 			_putchar(result[i] + '0');
 	}
 	if (!a)
-		_putchar('\0');
+		_putchar('0');
 	_putchar('\n');
 	free(result);
 	return (0);
