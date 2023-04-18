@@ -22,7 +22,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		return (NULL);
 	}
-	while (name[d] != NULL)
+	while (name[d])
 	{
 		d++;
 	}
@@ -32,7 +32,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(s);
 		return (NULL);
 	}
-	while (owner[e] != NULL)
+	while (owner[e])
 	{
 		e++;
 	}
