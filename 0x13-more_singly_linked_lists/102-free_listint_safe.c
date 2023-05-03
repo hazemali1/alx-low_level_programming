@@ -1,50 +1,6 @@
 #include "lists.h"
 
 /**
- * find_listint_loop - Finding
- *
- * @head: Parameter
- *
- * Return: Size
- */
-int *find_listint_loop(listint_t *head)
-{
-        listint_t *s, *d;
-	int w = 0;
-
-        if (head == NULL)
-        {
-                return (w);
-        }
-        d = head;
-        d = d->next;
-	w++;
-        while (d != NULL)
-        {
-                if (d == d->next)
-                {
-                        return (w);
-                }
-                s = head;
-                while (s != d)
-                {
-                        if (s == d->next)
-                        {
-                                return (s);
-                        }
-			else
-			{
-				w++;
-                        	s = s->next;
-			}
-                }
-		w = 0;
-                d = d->next;
-        }
-        return (NULL);
-}
-
-/**
  * free_listint_safe - Free
  *
  * @h: Parameter
