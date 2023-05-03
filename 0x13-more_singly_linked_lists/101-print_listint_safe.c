@@ -19,7 +19,7 @@ size_t print_listint_safe(const listint_t *head)
 		{
 			if (s == stored[d])
 			{
-				printf("-> [%p] ", s);
+				printf("-> [%p] ", (void *)s);
 				printf("%d\n", s->n);
 				return (w);
 			}
@@ -27,7 +27,7 @@ size_t print_listint_safe(const listint_t *head)
 		w++;
 		stored[r] = s;
 		r++;
-		printf("[%p] ", s);
+		printf("[%p] ", (void *)s);
 		printf("%d\n", s->n);
 		s = s->next;
 	}
