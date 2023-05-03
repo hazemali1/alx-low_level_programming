@@ -13,7 +13,7 @@ size_t free_listint_safe(listint_t **h)
 	size_t w = 0;
 
 	s = *h;
-	while (s != NULL && w < 9)
+	while (s != NULL && w < 8)
 	{
 		d = s->next;
 		s->next = NULL;
