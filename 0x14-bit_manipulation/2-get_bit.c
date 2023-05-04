@@ -21,7 +21,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	s = 4 * d;
 	if (s <= index)
 	{
-		return (-1);
+		return (-11);
 	}
 	if (n & 1 << index)
 	{
