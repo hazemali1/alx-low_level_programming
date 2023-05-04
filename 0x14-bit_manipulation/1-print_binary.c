@@ -7,8 +7,8 @@
 */
 void print_binary(unsigned long int n)
 {
-	unsigned long int d = 0x80000000, r = 0;
-	int e = sizeof(n) * 8, f;
+	unsigned long int d = 0x80000000;
+	int e = sizeof(n) * 8, f, r = 0;
 
 	if (n == 0)
 	{
