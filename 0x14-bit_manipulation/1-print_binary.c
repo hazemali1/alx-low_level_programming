@@ -7,7 +7,7 @@
 */
 void print_binary(unsigned long int n)
 {
-	unsigned long int d = 0x80000000, f;
+	unsigned long int d = 0x80000000, f, r = 0;
 
 	if (n == 0)
 	{
@@ -18,8 +18,9 @@ void print_binary(unsigned long int n)
 		if (n & (d >> f))
 		{
 			_putchar('1');
+			r = 1;
 		}
-		else
+		else if (r == 1)
 		{
 			_putchar('0');
 		}
