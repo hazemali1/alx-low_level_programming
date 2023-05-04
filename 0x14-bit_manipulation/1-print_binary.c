@@ -7,7 +7,7 @@
 */
 void print_binary(unsigned long int n)
 {
-	unsigned long int d = 0x8000000, f, r = 0;
+	unsigned long int d = 0x80000000, f, r = 0;
 
 	if (n == 0)
 	{
@@ -20,7 +20,7 @@ void print_binary(unsigned long int n)
 			_putchar('1');
 			r = 1;
 		}
-		else if (r == 1 && f < 28)
+		else if (r == 1)
 		{
 			_putchar('0');
 		}
