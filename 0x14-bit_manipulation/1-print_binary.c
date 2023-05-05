@@ -7,16 +7,15 @@
 */
 void print_binary(unsigned long int n)
 {
-	unsigned long int d = 0x80000000;
 	int f, r = 0;
 
 	if (n == 0)
 	{
 		_putchar('0');
 	}
-	for (f = 0; f < 32; f++)
+	for (f = 63; f >= 0; f--)
 	{
-		if (n & (d >> f))
+		if (1 & (n >> f))
 		{
 			_putchar('1');
 			r = 1;
