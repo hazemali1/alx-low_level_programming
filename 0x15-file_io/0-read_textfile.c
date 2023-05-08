@@ -10,8 +10,9 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int s, d;
-	char w[1000000000000000];
+	int s;
+	ssize_t d, q;
+	char w[1000000];
 
 	if (filename == NULL)
 	{
@@ -23,6 +24,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	d = read(s, w, letters);
-	write(STDOUT_FILENO, w, d);
-	return (d);
+	q = write(STDOUT_FILENO, w, d);
+	close(s);
+	return (q);
 }
