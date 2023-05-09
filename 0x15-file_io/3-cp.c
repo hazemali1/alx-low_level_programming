@@ -10,7 +10,7 @@
 */
 int main(int argc, char *argv[])
 {
-	int s, d, w, q = 1024, e, r;
+	int s, d, w, q = 1, e, r;
 	char buff[1024];
 
 	if (argc != 3)
@@ -19,7 +19,8 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	s = open(argv[1], O_RDONLY);
-	while (q == 1024)
+	d = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
+	while (q > 0)
 	{
 	q = read(s, buff, 1024);
 	if (s == -1 || q == -1)
@@ -27,7 +28,6 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	d = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	w = write(d, buff, q);
 	if (d == -1 || w == -1)
 	{
