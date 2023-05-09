@@ -10,7 +10,7 @@
 */
 int main(int argc, char *argv[])
 {
-	int s, d, w, q, e, r;
+	int s, d, w, q = 1024, e, r;
 	char buff[1024];
 
 	if (argc != 3)
@@ -19,6 +19,8 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	s = open(argv[1], O_RDONLY);
+	while (q == 1024)
+	{
 	q = read(s, buff, 1024);
 	if (s == -1 || q == -1)
 	{
@@ -31,6 +33,7 @@ int main(int argc, char *argv[])
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
+	}
 	}
 	e = close(s);
 	r = close(d);
