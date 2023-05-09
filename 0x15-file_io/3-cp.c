@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	s = open(argv[1], O_RDONLY);
-	while (q > 0)
+	while (q == 1024)
 	{
 	q = read(s, buff, 1024);
 	if (s == -1 || q == -1)
