@@ -21,6 +21,23 @@ void check(unsigned char *buff)
 }
 
 /**
+ * closee - Closes
+ *
+ * @s: Parameter
+*/
+void closee(int s)
+{
+	int w;
+
+	w = close(s);
+	if (w == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close this file\n");
+		exit(98);
+	}
+}
+
+/**
  * Magic - Print Magic
  *
  * @buff: Parameter
@@ -233,30 +250,31 @@ void Entry_point_address(unsigned long int e_entry, unsigned char *buff)
 */
 int main(int argc, char *argv[])
 {
-	int s, d, w;
+	int s, d;
 	Elf64_Ehdr *buff;
-	unsigned int q;
 	unsigned long int a;
 
 	(void)argc;
 
 	s = open(argv[1], O_RDONLY);
 	if (s == -1)
+	{
 		dprintf(STDERR_FILENO, "Error: Can't read this file\n");
 		exit(98);
+	}
 	buff = malloc(sizeof(Elf64_Ehdr));
 	if (buff == NULL)
-		w = close(s);
-		if (w == -1)
-			dprintf(STDERR_FILENO, "Error: Can't close this file\n");
-			exit(98);
+	{
+		closee(s);
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
+	}
 	d = read(s, buff, 1024);
 	if (d == -1)
+	{
 		dprintf(STDERR_FILENO, "Error: Can't read this file\n");
 		exit(98);
-	q = buff->e_type;
+	}
 	a = buff->e_entry;
 	check(buff->e_ident);
 	Magic(buff->e_ident);
@@ -265,12 +283,9 @@ int main(int argc, char *argv[])
 	Version(buff->e_ident);
 	OS_ABI(buff->e_ident);
 	ABI_Version(buff->e_ident);
-	Type(q, buff->e_ident);
+	Type(buff->e_type, buff->e_ident);
 	Entry_point_address(a, buff->e_ident);
 	free(buff);
-	w = close(s);
-	if (w == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close this file\n");
-		exit(98);
+	closee(s);
 	return (0);
 }
