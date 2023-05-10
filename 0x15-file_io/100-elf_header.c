@@ -6,6 +6,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void check(unsigned char *buff);
+void Magic(unsigned char *buff);
+void Class(unsigned char *buff);
+void Data(unsigned char *buff);
+void Version(unsigned char *buff);
+void OS_ABI(unsigned char *buff);
+void ABI_Version(unsigned char *buff);
+void Type(unsigned int e_type, unsigned char *buff);
+void Entry(unsigned long int e_entry, unsigned char *buff);
+void closee(int s);
+
 /**
  * check - Check if ELF or not
  *
@@ -255,7 +266,6 @@ int main(int argc, char *argv[])
 	unsigned long int a;
 
 	(void)argc;
-
 	s = open(argv[1], O_RDONLY);
 	if (s == -1)
 	{
@@ -269,9 +279,10 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
 	}
-	d = read(s, buff, 1024);
+	d = read(s, buff, sizeof(Elf64_Ehdr));
 	if (d == -1)
 	{
+		free(buff);
 		dprintf(STDERR_FILENO, "Error: Can't read this file\n");
 		exit(98);
 	}
