@@ -237,6 +237,7 @@ int main(int argc, char *argv[])
 	Elf64_Ehdr *buff;
 	unsigned int q;
 	unsigned long int a;
+
 	(void)argc;
 
 	s = open(argv[1], O_RDONLY);
