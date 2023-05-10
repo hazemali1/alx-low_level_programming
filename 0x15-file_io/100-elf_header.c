@@ -166,7 +166,8 @@ void ABI_Version(unsigned char *buff)
 /**
  * Type - Print type
  *
- * @buff: Parameter
+ * @buff: Parameter1
+ * @e_type: Parameter2
 */
 void Type(unsigned int e_type, unsigned char *buff)
 {
@@ -200,7 +201,8 @@ void Type(unsigned int e_type, unsigned char *buff)
 /**
  * Entry_point_address - Print Entry
  *
- * @buff: Parameter
+ * @buff: Parameter1
+ * @e_entry: Parameter2
 */
 void Entry_point_address(unsigned long int e_entry, unsigned char *buff)
 {
@@ -235,33 +237,24 @@ int main(int argc, char *argv[])
 	Elf64_Ehdr *buff;
 	unsigned int q;
 	unsigned long int a;
-
 	(void)argc;
 
 	s = open(argv[1], O_RDONLY);
 	if (s == -1)
-	{
 		dprintf(STDERR_FILENO, "Error: Can't read this file\n");
 		exit(98);
-	}
 	buff = malloc(sizeof(Elf64_Ehdr));
 	if (buff == NULL)
-	{
 		w = close(s);
 		if (w == -1)
-		{
 			dprintf(STDERR_FILENO, "Error: Can't close this file\n");
 			exit(98);
-		}
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
-	}
 	d = read(s, buff, 1024);
 	if (d == -1)
-	{
 		dprintf(STDERR_FILENO, "Error: Can't read this file\n");
 		exit(98);
-	}
 	q = buff->e_type;
 	a = buff->e_entry;
 	check(buff->e_ident);
@@ -276,9 +269,7 @@ int main(int argc, char *argv[])
 	free(buff);
 	w = close(s);
 	if (w == -1)
-	{
 		dprintf(STDERR_FILENO, "Error: Can't close this file\n");
 		exit(98);
-	}
 	return (0);
 }
