@@ -3,7 +3,7 @@
 /**
  * add_dnodeint - Add at beging
  *
- * @heaad: Parameter1
+ * @head: Parameter1
  * @n: PArametrer2
  *
  * Return: Pointer
@@ -16,7 +16,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	if (s == NULL)
 		return (NULL);
 	s->n = n;
-	s ->next = *head;
+	s->next = *head;
 	s->prev = NULL;
 	if (*head != NULL)
 		(*head)->prev = s;
