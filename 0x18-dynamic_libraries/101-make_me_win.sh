@@ -1,3 +1,3 @@
 #!/bin/bash
-gcc -shared -fPIC -o lib.so file.c
-export LD_PRELOAD=./lib.so
+gcc -shared -fPIC -o my_lib.so file.c
+export LD_PRELOAD=./my_lib.so
