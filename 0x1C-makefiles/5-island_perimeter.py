@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+!/usr/bin/python3
 """
 python function file
 """
@@ -12,7 +12,7 @@ def island_perimeter(grid):
     for i in range(len(grid)):
         for j in range(len(grid[0])):
             if grid[i][j] == 1:
-                if  j == 0:
+                if j == 0:
                     s += 1
                 elif grid[i][j - 1] != 1:
                     s += 1
