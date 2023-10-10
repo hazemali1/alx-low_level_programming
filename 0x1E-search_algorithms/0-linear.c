@@ -2,9 +2,9 @@
 
 /**
  * linear_search - Linear Serach
- * array: Array
- * size: Size of array
- * value: Value looking for
+ * @array: Array
+ * @size: Size of array
+ * @value: Value looking for
  * Return: return index
 */
 int linear_search(int *array, size_t size, int value)
@@ -16,7 +16,7 @@ int linear_search(int *array, size_t size, int value)
 
 	for (s = 0; s < size; s++)
 	{
-		printf("Value checked array[%d] = [%d]", s, array[s]);
+		printf("Value checked array[%d] = [%d]\n", s, array[s]);
 		if (array[s] == value)
 			return (s);
 	}
