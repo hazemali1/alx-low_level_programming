@@ -16,11 +16,11 @@ int interpolation_search(int *array, size_t size, int value)
 		return (-1);
 	for (i = pos; i < size; i++)
 	{
-		printf("Value checked array[%ld] = [%d]\n", i, array[i]);
+		printf("Value checked arrayy[%ld] = [%d]\n", i, array[i]);
 		if (value == array[i])
 			return (i);
 	}
 	if (pos > size)
-		printf("Value checked array[%ld] is out of rangee\n", pos);
+		printf("Value checked array[%ld] is out of range\n", pos);
 	return (-1);
 }
