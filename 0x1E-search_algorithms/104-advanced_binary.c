@@ -30,12 +30,12 @@ int advanced_binary(int *array, size_t size, int value)
 		return (s);
 	else if (value < array[s])
 	{
-		return (advanced_binary(array, s, value));
+		return (advanced_binary(array, s + 1, value));
 	}
 	else if (value > array[s])
 	{
 		arr = array + s + 1;
-		d = advanced_binary(arr, size - s - 1, value);
+		d = advanced_binary(arr, size - (s + 1), value);
 		if (d != -1)
 			return (d + s + 1);
 		else
