@@ -57,8 +57,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		{
 			return (k);
 		}
-		if (k->next)
-			k = k->next;
+		k = k->next;
 	}
 	return (NULL);
 }
