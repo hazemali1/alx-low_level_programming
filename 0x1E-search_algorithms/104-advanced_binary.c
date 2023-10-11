@@ -29,7 +29,7 @@ int advanced_binary(int *array, size_t size, int value)
 		else
 			printf(",");
 	}
-	if (array[s] == value && array[s - 1] != value)
+	if (array[s] == value && (s == 0 || array[s - 1] != value))
 		return (s);
 	else if (value < array[s])
 	{
