@@ -21,6 +21,6 @@ int interpolation_search(int *array, size_t size, int value)
 			return (i);
 	}
 	if (pos > size)
-		printf("Value checked array[%ld] is out of range\n", pos);
+		printf("Value checked array[%ld] is out of rangee\n", pos);
 	return (-1);
 }
