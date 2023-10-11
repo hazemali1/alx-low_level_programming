@@ -9,8 +9,8 @@
 */
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-	size_t i, f, l, ii;
-	int s = sqrt(size), t = 0, q;
+	size_t i;
+	int s = sqrt(size), q;
 	listint_t *h, *k;
 
 	if (list == NULL)
