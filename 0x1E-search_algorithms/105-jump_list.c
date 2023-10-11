@@ -1,63 +1,47 @@
 #include "search_algos.h"
+#include <math.h>
 
 /**
- * jump_list - Jump List Serach
- * @list: Array
- * @size: Size of array
- * @value: Value looking for
- * Return: return pointer
-*/
+ * jump_list - Jump List Search
+ * @list: Pointer to the head of the linked list
+ * @size: Size of the linked list
+ * @value: Value to search for
+ * Return: Pointer to the node containing the value, or NULL if not found
+ */
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-	size_t i, f, l, ii;
-	int s = sqrt(size), t = 0, q;
-	listint_t *h, *k;
+	size_t jump, i;
+	listint_t *current, *prev;
 
-	if (list == NULL)
+	if (list == NULL || size == 0)
 		return (NULL);
-	h = list;
-	k = list;
-	for (q = 0; q < s; q++)
+
+	jump = sqrt(size);
+	current = list;
+	prev = NULL;
+
+	while (current->n < value)
 	{
-		h = h->next;
-	}
-	i = s;
-	while (h && h->next)
-	{
-		printf("Value checked at index [%ld] = [%d]\n", i, h->n);
-		if (h->n > value)
-		{
-			printf("Value found between indexes [%ld] and [%ld]\n", i - s, i);
-			f = i - s;
-			l = i;
-			t = 1;
+		prev = current;
+		for (i = 0; current->next && i < jump; i++)
+			current = current->next;
+
+		printf("Value checked at index [%lu] = [%d]\n", current->index, current->n);
+
+		if (!current->next)
 			break;
-		}
-		for (q = 0; q < s; q++)
-		{
-			if (h->next)
-				h = h->next;
-			k = k->next;
-		}
-		i += s;
 	}
-	if (t == 0)
+
+	printf("Value found between indexes [%lu] and [%lu]\n", prev->index, current->index);
+
+	while (prev && prev->index <= current->index)
 	{
-		if (i >= size)
-			ii = size - 1;
-		printf("Value checked at index [%ld] = [%d]\n", ii, h->n);
-		printf("Value found between indexes [%ld] and [%ld]\n", i - s, ii);
-		f = i - s;
-		l = size - 1;
+		printf("Value checked at index [%lu] = [%d]\n", prev->index, prev->n);
+		if (prev->n == value)
+			return (prev);
+
+		prev = prev->next;
 	}
-	for (i = f; i <= l; i++)
-	{
-		printf("Value checked at index [%ld] = [%d]\n", i, k->n);
-		if (k->n == value)
-		{
-			return (k);
-		}
-		k = k->next;
-	}
+
 	return (NULL);
 }
