@@ -13,7 +13,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	int s = sqrt(size), t = 0, q;
 	listint_t *h, *k;
 
-	if (list == NULL)
+	if (list == NULL || size == 0)
 		return (NULL);
 	h = list;
 	k = list;
