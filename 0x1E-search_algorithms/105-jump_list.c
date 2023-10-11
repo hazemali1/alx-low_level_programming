@@ -50,7 +50,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		f = i - s;
 		l = size - 1;
 	}
-	for (i = f; i <= l && k != h; i++)
+	for (i = f; i <= l; i++)
 	{
 		printf("Value checked at index [%ld] = [%d]\n", i, k->n);
 		if (k->n == value)
