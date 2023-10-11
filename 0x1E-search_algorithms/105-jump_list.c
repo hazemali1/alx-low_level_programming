@@ -23,7 +23,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		printf("Value checked at index [%lu] = [%d]\n", h->index, h->n);
 	}
 	printf("Value found between indexes [%lu] and [%lu]\n", k->index, h->index);
-	for (; k && k->index; k = k->index)
+	while (k && k->index)
 	{
 		printf("Value checked at index [%lu] = [%d]\n", k->index, k->n);
 		if (k->n == value)
